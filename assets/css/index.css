@@ -203,11 +203,13 @@ header .microphone-icon {
 aside {
     width: 20%;
     display: inline-block;
+    overflow-y: auto;
+    height: calc(100vh -70px);
+
 }
 
 aside:hover {
-    overflow-y: scroll;
-    height: 100vh;
+    
 }
 
 nav {
@@ -295,7 +297,11 @@ nav {
 }
 
 /* video-area */
-.video-area {}
+.video-area {
+    overflow-y: auto;
+    height: 100vh;
+    overflow: hidden;
+}
 
 /* Videos */
 .video-card {
