@@ -86,6 +86,7 @@ section {
 .w80 {width: 80%;}
 .w60 {width: 60%;}
 .w40 {width: 40%;}
+.w50 {width: 50%;}
 
 /* Header */
 header {
@@ -204,13 +205,12 @@ aside {
     width: 20%;
     display: inline-block;
     overflow-y: auto;
-    height: calc(100vh -70px);
-
+    height: calc(100vh - 70px);
 }
 
-aside:hover {
+/* aside:hover {
     
-}
+} */
 
 nav {
     margin: 0 15px;
@@ -299,12 +299,13 @@ nav {
 /* video-area */
 .video-area {
     overflow-y: auto;
-    height: 100vh;
-    overflow: hidden;
+    height: calc(100vh - 110px);
+    /* overflow: hidden; */
 }
 
 /* Videos */
 .video-card {
+    width: 100%;
     overflow: hidden;
     background-color: #fff;
 }
@@ -316,21 +317,25 @@ nav {
 .video-card-image {
     border-radius: 15px;
     transition: border-radius 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    height: 192px;
 }
 
 /* Video card bottom content */
 .video-card-bottom {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     margin: 10px 0;
 }
 
-/* Channel profile pic */
-.channel-profile-wrapper {
-    width: 35px;
-}
+/* Channel profile pic */   
 
 .channel-profile {
     border-radius: 100%;
+    width: 35px;
+    align-self: flex-start;
 }
 
 /* Video information */
@@ -360,9 +365,11 @@ nav {
 }
 
 /* Hover effects */
-.search-icon:hover, .microphone-icon:hover ,.menu-icon:hover, 
+.search-icon:hover, 
+.microphone-icon:hover ,
+.menu-icon:hover, 
 nav .nav-item-active:hover, 
-.tag:hover {
+.tag:hover , .review-btn:hover{
     background-color: #d3d3d3;
 }
 
@@ -392,8 +399,64 @@ nav .nav-item-active:hover,
 
 
 
-/* Styling for video link-1 */
+/* Styling for video links */
 
 .container-enclosed {
     width: 1500px;
 }
+
+.video-card-image-v2 {
+    width: 100%;
+    height: 450px;
+}
+
+.video-card-bottom-v2{}
+
+.channel-profile-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.channel-info {
+    margin-left: 7px;
+}
+
+.channel-name-v2 {
+    font-size: 1.25rem;
+}
+
+.channel-subscriber-count {
+    display: block;
+    font-size: 14px;
+    color: #606060;
+}
+
+.subscribe-btn {
+    padding: 10px 14px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 18px;
+    display: inline-flex;
+}
+
+.more-options-wrapper {
+    display: flex;
+    justify-content: end;
+}
+
+.review-btns {
+    display: inline-flex;
+    line-height: 0;
+    align-items: center;
+    gap: 16px;
+}
+
+.review-btn {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    background-color: #0000000d;
+    padding: 10px;
+    border-radius: 18px;
+} 
+
