@@ -259,7 +259,7 @@ nav {}
 
 /* navbar menu area */
 .nav-menu-wrapper {
-    margin: 14px 0;
+    margin: 14px 10px;
     font-size: 14px;
 }
 
@@ -275,6 +275,7 @@ nav {}
     color: #909090;
     font-size: 14px;
     margin-bottom: 14px;
+    margin: 0 10px;
 }
 
 /* YouTube tags */
