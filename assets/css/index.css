@@ -32,7 +32,7 @@ p,h2,h3 {
 }
 
 section {
-    padding: 50px 0;
+
 }
 
 .container {
@@ -44,7 +44,6 @@ section {
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -10px;
 }
 
 .col {
@@ -82,11 +81,17 @@ section {
 .my-3 {margin: 1.5rem 0 ;}
 .my-4 {margin: 1.75rem 0 ;}
 
+.pl-2 {padding-left: 1.5rem;}
+.px-2 {padding: 0 1.5rem;}
+
+.w20 {width: 20%;}
+.w30 {width: 30%;}
 .w33 {width: 33.33%;}
-.w80 {width: 80%;}
-.w60 {width: 60%;}
 .w40 {width: 40%;}
 .w50 {width: 50%;}
+.w60 {width: 60%;}
+.w70 {width: 70%;}
+.w80 {width: 80%;}
 
 /* Header */
 header {
@@ -202,7 +207,6 @@ header .microphone-icon {
 
 /* Aside column */
 aside {
-    width: 20%;
     display: inline-block;
     overflow-y: auto;
     height: calc(100vh - 70px);
@@ -212,9 +216,7 @@ aside {
     
 } */
 
-nav {
-    margin: 0 15px;
-}
+nav {}
 
 .nav-hr {
     margin: 12px -15px;
@@ -236,9 +238,13 @@ nav {
     font-size: 20px;
 }
 
+.aside-components-title {
+    margin: 10px;
+}
+
 /* nav sign-in area */
 .sign-in-area {
-    margin: 10px 25px;
+    margin: 10px;
 }
 
 .sign-in-area span{
@@ -255,7 +261,6 @@ nav {
 .nav-menu-wrapper {
     margin: 14px 0;
     font-size: 14px;
-    font-weight: 600;
 }
 
 .nav-menu-wrapper a{
@@ -267,7 +272,7 @@ nav {
 }
 
 .copyright {
-    color: #606060;
+    color: #909090;
     font-size: 14px;
     margin-bottom: 14px;
 }
@@ -299,7 +304,7 @@ nav {
 /* video-area */
 .video-area {
     overflow-y: auto;
-    height: calc(100vh - 110px);
+    height: calc(100vh - 111px);
     /* overflow: hidden; */
 }
 
@@ -310,8 +315,12 @@ nav {
     background-color: #fff;
 }
 
-.video-card-top {
-    position: relative;
+aside .video-card {
+    padding: 5px 10px;
+}
+
+aside .video-card-top {
+    width: 40%;
 }
 
 .video-card-image {
@@ -323,13 +332,18 @@ nav {
 
 /* Video card bottom content */
 .video-card-bottom {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    margin: 10px 0;
 }
 
+aside .video-card-bottom {
+    width: 60%;
+}
+
+
+aside .video-info {
+    width: calc(100% - 5px);
+}
 /* Channel profile pic */   
 
 .channel-profile {
@@ -343,7 +357,7 @@ nav {
     display: block;
     width: calc(100% - 40px);
     font-size: 16px;
-    margin-left: 10px;
+    padding-left: 10px;
 }
 
 .video-info-sm {
@@ -401,13 +415,14 @@ nav .nav-item-active:hover,
 
 /* Styling for video links */
 
-.container-enclosed {
-    width: 1500px;
-}
-
 .video-card-image-v2 {
     width: 100%;
     height: 450px;
+}
+
+aside .video-card-image-v2 {
+    width: 100%;
+    height: auto;
 }
 
 .video-card-bottom-v2{}
@@ -460,3 +475,13 @@ nav .nav-item-active:hover,
     border-radius: 18px;
 } 
 
+/* Custom Scrollbar  */
+
+::-webkit-scrollbar {
+    width: 10px; 
+  }
+
+::-webkit-scrollbar-thumb {
+    background: #5e5252; 
+    border-radius: 20px;       
+}
