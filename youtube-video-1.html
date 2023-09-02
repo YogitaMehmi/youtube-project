@@ -16,7 +16,7 @@
       
             <div class="row">
                 <div class="col header-left">
-                    <a href="!#">
+                    <a id="toggle-slow" href="#!">
                         <i class="menu-icon fa-solid fa-bars"></i>
                     </a>
 
@@ -120,10 +120,11 @@
                             
                             <div class="w50 more-options-wrapper">
                                 <div class="review-btns">
-                                    <a class="review-btn" href="!#">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        18k | <i class="fa-regular fa-thumbs-down"></i>
-                                    </a>
+                                    <div class="review-btn">
+                                        <a class="video-like-btn" href="!#"><i class="fa-regular fa-thumbs-up"></i>
+                                            18k | </a> 
+                                            <a class="video-dislike-btn" href="!#"><i class="fa-regular fa-thumbs-down"></i></a>
+                                    </div>
 
                                     <a class="review-btn" href="!#"><i class="fa-solid fa-share"></i>Share</a>
 
@@ -137,7 +138,7 @@
                     </div>
                 </div>
                 
-                <div class="col w30">
+                <div class="col w30 sidebar-video-area">
                     <aside>
                         <div class="video-card  flex flex-wrap">
 
@@ -341,5 +342,9 @@
             </div>
         </div>
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
 </body>
 </html>
