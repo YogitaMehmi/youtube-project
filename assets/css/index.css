@@ -223,7 +223,7 @@ aside {
 }
 
 .shrink-sidebar .main-page-sidebar {
-    width: 5%;
+    width: 110px;
 }
 
 
@@ -244,7 +244,16 @@ nav {}
     gap: 20px;
     border-radius: 10px;
     transition: background-color 0.2s linear;
+}
 
+.shrink-sidebar .nav-item {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+
+.shrink-sidebar .nav-item svg {
+    margin: 0 auto;
 }
 
 .nav-item-active {
@@ -253,6 +262,7 @@ nav {}
 
 .nav-item i,svg {
     font-size: 20px;
+    display: block;
 }
 
 .aside-components-title {
@@ -340,7 +350,7 @@ nav {}
 }
 
 .shrink-sidebar .video-area-wrapper {
-    width: 95%;
+    width: calc(100% - 110px);
 }
 
 /* Videos */
@@ -389,7 +399,7 @@ aside .video-title {
 }
 
 aside .video-info {
-    width: calc(100% - 5px);
+    width: calc(100% - 25px);
 }
 /* Channel profile pic */   
 
@@ -521,13 +531,26 @@ aside .video-card-image-v2 {
     gap: 16px;
 }
 
+.like-dislike-btn-wrapper {
+        background-color: #0000000d;
+        border-radius: 18px;
+}
+
+body .video-like-btn {
+    border-radius: 18px 0 0 18px;
+}
+
+body .video-dislike-btn {
+    border-radius: 0 18px 18px 0;
+}
+
 .review-btn {
+    background-color: #0000000d;
+    border-radius: 18px;
     display: inline-flex;
     gap: 5px;
     align-items: center;
-    background-color: #0000000d;
     padding: 10px;
-    border-radius: 18px;
 } 
 
 /* Custom Scrollbar  */
