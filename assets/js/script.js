@@ -3,3 +3,9 @@ $(document).ready(function() {
         $("body").toggleClass("shrink-sidebar");
     });
 });
+
+$(document).ready(function() {
+    $("#toggle-slow-v2").click(function() {
+        $("body").toggleClass("show-sidebar");
+    });
+});

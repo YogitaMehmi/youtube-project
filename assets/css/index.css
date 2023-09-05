@@ -55,6 +55,9 @@ section {
     padding: 0 10px;
 }
 
+/* position */
+.p-relative {position: relative;}
+
 /* Typography */
 .mt-1 {margin-top: 1rem;}
 .mt-2 {margin-top: 1.25rem;}
@@ -101,7 +104,7 @@ section {
 header {
     padding: 15px 0;
     background-color: #fff;
-    z-index: 9;
+    z-index: 99;
     position: sticky;
     top: 0;
 }
@@ -353,6 +356,36 @@ nav {}
     width: calc(100% - 110px);
 }
 
+/* Playlist */
+.playlist {
+    height: 350px;
+    overflow-y: auto;
+}
+
+.playlist .video-card {
+    padding: 5px 10px;
+}
+
+.playlist .video-card-top {
+    width: 40%;
+    height: auto;
+}
+
+.playlist .video-card-bottom {
+    width: 60%;
+    margin: 0;
+}
+
+.playlist .video-title {
+    max-height: 36px;
+    overflow: hidden;
+    display: block;
+}
+
+.playlist .video-info {
+    width: calc(100% - 25px);
+}
+
 /* Videos */
 .video-card {
     width: 100%;
@@ -360,13 +393,6 @@ nav {}
     background-color: #fff;
 }
 
-aside .video-card {
-    padding: 5px 10px;
-}
-
-aside .video-card-top {
-    width: 40%;
-}
 
 .video-card-image {
     border-radius: 15px;
@@ -387,20 +413,7 @@ aside .video-card-top {
     overflow: hidden;
 }
 
-aside .video-card-bottom {
-    width: 60%;
-    margin: 0;
-}
 
-aside .video-title {
-    max-height: 36px;
-    overflow: hidden;
-    display: block;
-}
-
-aside .video-info {
-    width: calc(100% - 25px);
-}
 /* Channel profile pic */   
 
 .channel-profile {
@@ -480,12 +493,28 @@ nav .nav-item-active:hover,
 
 /* Styling for video links */
 
+/* sidebar */
+.video-link-sidebar {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    width: 240px;
+    background-color: #fff;
+    z-index: 9;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.show-sidebar .video-link-sidebar {
+    opacity: 1;
+}
+
 .video-card-image-v2 {
     width: 100%;
     height: 450px;
 }
 
-aside .video-card-image-v2 {
+.playlist .video-card-image-v2 {
     width: 100%;
     height: auto;
 }
@@ -532,16 +561,13 @@ aside .video-card-image-v2 {
 }
 
 .like-dislike-btn-wrapper {
-        background-color: #0000000d;
-        border-radius: 18px;
+    background-color: #0000000d;
+    border-radius: 18px;
+    overflow: hidden;
 }
 
-body .video-like-btn {
-    border-radius: 18px 0 0 18px;
-}
-
-body .video-dislike-btn {
-    border-radius: 0 18px 18px 0;
+body .video-like-dislike-btn {
+    border-radius: 0;
 }
 
 .review-btn {
