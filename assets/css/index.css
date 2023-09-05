@@ -375,6 +375,7 @@ nav {}
 .video-card-bottom {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     margin: 1.5rem 0;
 }
 
@@ -539,6 +540,7 @@ nav .nav-item-active:hover,
 
 .like-dislike-btn-wrapper {
     background-color: #0000000d;
+    color: #0000001a;
     border-radius: 18px;
     overflow: hidden;
 }
