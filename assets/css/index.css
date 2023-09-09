@@ -221,15 +221,6 @@ aside {
     height: calc(100vh - 70px);
 }
 
-.main-page-sidebar {
-    width: 20%;
-}
-
-.shrink-sidebar .main-page-sidebar {
-    width: 110px;
-}
-
-
 /* aside:hover {
     
 } */
@@ -237,27 +228,9 @@ aside {
 nav {}
 
 .nav-hr {
-    margin: 12px -15px;
+    margin: 12px 0;
 }
 
-.nav-item {
-    display: flex;
-    padding: 10px;
-    align-items: center;
-    gap: 20px;
-    border-radius: 10px;
-    transition: background-color 0.2s linear;
-}
-
-.shrink-sidebar .nav-item {
-    display: block;
-    font-size: 12px;
-    text-align: center;
-}
-
-.shrink-sidebar .nav-item svg {
-    margin: 0 auto;
-}
 
 .nav-item-active {
     background-color: rgba(0, 0, 0, 0.05);
@@ -288,9 +261,6 @@ nav {}
 }
 
 /* navbar menu area */
-.shrink-sidebar .sidebar-shrink-hide {
-    display: none;
-}
 
 .nav-menu-wrapper {
     margin: 14px 10px;
@@ -352,10 +322,6 @@ nav {}
     /* overflow: hidden; */
 }
 
-.shrink-sidebar .video-area-wrapper {
-    width: calc(100% - 110px);
-}
-
 /* Videos */
 .video-card {
     width: 100%;
@@ -377,6 +343,7 @@ nav {}
     flex-wrap: wrap;
     align-items: flex-start;
     margin: 1.5rem 0;
+    justify-content: space-between;
 }
 
 .video-title {
@@ -425,7 +392,7 @@ nav {}
 .search-icon, 
 .microphone-icon ,
 .menu-icon, 
-nav .nav-item-active,
+/* nav .nav-item, */
 .review-btn,
 .sign-in-btn,
 .video-like-dislike-btn
@@ -474,7 +441,6 @@ nav .nav-item-active:hover,
 .video-link-sidebar {
     opacity: 0;
     transition: opacity 0.5s ease;
-    width: 240px;
     background-color: #fff;
     z-index: 9;
     position: absolute;
@@ -502,6 +468,7 @@ nav .nav-item-active:hover,
 .channel-profile-wrapper {
     display: flex;
     flex-wrap: wrap;
+    /* width:40%; */
 }
 
 .channel-info {
@@ -529,6 +496,7 @@ nav .nav-item-active:hover,
 .more-options-wrapper {
     display: flex;
     justify-content: end;
+    width: 60%;
 }
 
 .review-btns {
@@ -611,16 +579,132 @@ body .video-like-dislike-btn {
 }
 
 
+/* Sidebar properties */
+.main-page-sidebar, .video-link-sidebar {
+    width: 20%;
+    /* min-width: 170px; */
+}
+
+.nav-item, .video-link-sidebar .nav-item {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    transition: background-color 0.2s linear;
+}
+
+.shrink-sidebar .main-page-sidebar {
+    width: 110px;
+}
+
+.shrink-sidebar .nav-item {
+    flex-direction: column;
+    font-size: 12px;
+    gap: 5px;
+}
+
+.shrink-sidebar .sidebar-hide {
+    display: none;
+}
+
+.shrink-sidebar .video-area-wrapper {
+    width: calc(100% - 110px);
+}
+
 /* Tablet View */
 
 @media(max-width: 1082px) {
+    .tablet-w100 {
+        width: 100%;
+    }
+
     .tablet-w50 {
         width: 50%;
     }
+
+    .tablet-p-relative {position: relative;}
+
+    .sidebar-video-area {
+        width: 100%;
+    }
+
+    .main-page-sidebar {
+        width: 110px;
+    }
+    
+    .video-area-wrapper {width: calc(100% - 110px); padding-left: 0;}
+
+    .nav-item {
+        flex-direction: column;
+        font-size: 12px;
+        text-align: center;
+        gap: 5px;
+    }
+    
+    .sidebar-hide {
+        display: none;
+    }
+
+    .shrink-sidebar .nav-item {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .shrink-sidebar .main-page-sidebar {
+        width: 20%;
+        min-width: 183px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #fff;
+        z-index: 99;
+    }
+
+    .shrink-sidebar .sidebar-hide {
+        display: block;
+    }
+
+    .shrink-sidebar .video-area-wrapper {
+        width: 100%;
+    }
+
+    .video-card {width: 100%;}
+
+    .video-card-image-v2 {
+        width: 70%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* .channel-profile-wrapper {width: 40%;} */
 }
 
-@media(max-width: 1017px) {
-    .sidebar-video-area {
+@media(max-width: 678px) {
+
+    .mobile-w100 {width: 100%;}
+
+    .main-page-sidebar {opacity: 0;}
+
+    .shrink-sidebar .main-page-sidebar {opacity: 1;}
+
+    .video-card-image-v2 {
+        width: 70%;
+        margin: 0 auto;
+    }
+    
+    .main-page-sidebar {
+        width: 110px;
+        position: absolute;
+    }
+
+    .video-area-wrapper {
+        width: 100%;
+    }
+
+    .video-card-image-v2 {
         width: 100%;
     }
 }
